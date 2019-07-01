@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Red_bottle</folder>
+	<filename>img6663.jpeg</filename>
+	<path>D:\Robotics\ICCET2019\V-REP\Dataset\Red_bottle\img6663.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>512</width>
+		<height>512</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bottle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>117</xmin>
+			<ymin>316</ymin>
+			<xmax>187</xmax>
+			<ymax>503</ymax>
+		</bndbox>
+	</object>
+</annotation>
