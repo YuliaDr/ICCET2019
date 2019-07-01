@@ -4,6 +4,7 @@ import cv2
 import numpy
 import dlib
 import operator
+import PIL
 
 bottle_detector = dlib.simple_object_detector(r"D:\Robotics\ICCET2019\V-REP\Detectors\plastic_bottle1.svm")
 
@@ -22,7 +23,6 @@ if clientID != -1:
     err, resolution, image = vrep.simxGetVisionSensorImage(clientID, v0, 0, vrep.simx_opmode_streaming)
     time.sleep(2)
 
-
     # get image from vision sensor 'v0'
     err, resolution, image = vrep.simxGetVisionSensorImage(clientID, v0, 0, vrep.simx_opmode_buffer)
     if err == vrep.simx_return_ok:
@@ -33,19 +33,18 @@ if clientID != -1:
 
         # bottle detection
         boxes = bottle_detector(img2)
-        print(len(boxes)) # number of bottles
+        print(len(boxes))  # number of bottles
         num = 1
         dictionary = {}
         for box in boxes:
             # getting coordinates and rectangle the bottles
             (x, y, x2, y2) = [box.left(), box.top(), box.right(), box.bottom()]
-            #print(x, " ", y, " ", x2, " ", y2)
+            # print(x, " ", y, " ", x2, " ", y2)
             cv2.rectangle(img2, (x, y), (x2, y2), (0, 0, 255), 2)
             cv2.putText(img2, "b" + str(num), (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
             # filling the bottle dictionary (num: square) to sort by distance
             dictionary[num] = (x2 - x) * (y2 - y)
-
 
             num += 1
 
