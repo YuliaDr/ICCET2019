@@ -1,0 +1,3 @@
+[submodule "iccet2019"]
+	path = iccet2019
+	url = https://github.com/lars76/object-localization
