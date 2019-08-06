@@ -44,11 +44,15 @@ if clientID != -1:
             cv2.putText(img2, "b" + str(num), (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
             # filling the bottle dictionary (num: square) to sort by distance
-            dictionary[num] = (x2 - x) * (y2 - y)
+            W = 1
+            F = 443.93
+            P = (y2 - y)
+            D = (W * F) / P
+            dictionary[num] = round(D, 2)
 
             num += 1
 
-        dictionary = sorted(dictionary.items(), key=operator.itemgetter(1), reverse=True)
+        dictionary = sorted(dictionary.items(), key=operator.itemgetter(1))
         print(dictionary)
 
         if not boxes:
