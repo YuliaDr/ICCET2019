@@ -1,0 +1,26 @@
+<annotation>
+	<folder>new_images</folder>
+	<filename>Banknotes1_76.jpg</filename>
+	<path>C:\Users\Юля\ICCET2019\ex2\new_images\Banknotes1_76.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>banknotes</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>252</xmin>
+			<ymin>175</ymin>
+			<xmax>530</xmax>
+			<ymax>407</ymax>
+		</bndbox>
+	</object>
+</annotation>
