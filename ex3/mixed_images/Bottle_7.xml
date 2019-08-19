@@ -1,0 +1,26 @@
+<annotation>
+	<folder>iccet.photos.bottle</folder>
+	<filename>Bottle_7.jpg</filename>
+	<path>D:\iccet.photos.bottle\Bottle_7.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bottle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>159</xmin>
+			<ymin>146</ymin>
+			<xmax>521</xmax>
+			<ymax>297</ymax>
+		</bndbox>
+	</object>
+</annotation>
